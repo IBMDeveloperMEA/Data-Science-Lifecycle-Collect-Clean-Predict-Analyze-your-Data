@@ -1,16 +1,14 @@
-# !!Add workshop title!!
-
-Please refer to https://github.com/fawazsiddiqi/slides_to_pages to know how you can deploy slides to https://ibmdevelopermea.github.io
+# Data Science Lifecycle: Collect, Clean, Predict & Analyze your Data
 
 ## Workshop Resources
 
-- Login/Sign Up for IBM Cloud: <Link>
+- Login/Sign Up for IBM Cloud: https://ibm.biz/CleanAndPredict 
   
-- Hands-On Guide: <Link>
+- Hands-On Guide: https://ibm.biz/CleanAndPredict-HandsOn 
 
-- Slides: <Link>
+- Slides: https://ibm.biz/CleanAndPredict-Slides 
 
-- Workshop Replay: <Link>
+- Workshop Replay: https://www.youtube.com/watch?v=3DElV51FqL8
 
 ## Table of Contents
 1. [Prerequisites](#Prerequisites)
@@ -20,9 +18,9 @@ Please refer to https://github.com/fawazsiddiqi/slides_to_pages to know how you 
   
 ## **Sign-up/Login to IBM Cloud**
 
-If you are an existing user please [login to IBM Cloud](<PUT TRACK LINK HERE>)
+If you are an existing user please [login to IBM Cloud](https://cloud.ibm.com/registration?utm_medium=Inpersondirected&utm_content=000039JL&utm_term=10010797&utm_id=Sep2021-datasciencelifecyclecollectcleanpredictanalyzeyourdata-eventid-6142e1a9e48d51644c391e14-global-devadvgrp-dubai-franchise-workshop-dubai)
 
-And if you are not, don't worry! We have got you covered! There are 3 steps to create your account on [IBM Cloud](<PUT TRACK LINK HERE>): <br>
+And if you are not, don't worry! We have got you covered! There are 3 steps to create your account on [IBM Cloud](https://cloud.ibm.com/registration?utm_medium=Inpersondirected&utm_content=000039JL&utm_term=10010797&utm_id=Sep2021-datasciencelifecyclecollectcleanpredictanalyzeyourdata-eventid-6142e1a9e48d51644c391e14-global-devadvgrp-dubai-franchise-workshop-dubai): <br>
 1- Put your email and password. <br>
 2- You get a verification link with the registered email to verify your account. <br>
 3- Fill the personal information fields. <br>
@@ -44,14 +42,13 @@ And if you are not, don't worry! We have got you covered! There are 3 steps to c
 
 ## Workshop Resources
 
-- Login/Sign Up for IBM Cloud: <Link>
+- Login/Sign Up for IBM Cloud: https://ibm.biz/CleanAndPredict 
+  
+- Hands-On Guide: https://ibm.biz/CleanAndPredict-HandsOn 
 
-- Hands-On Guide: <Link>
+- Slides: https://ibm.biz/CleanAndPredict-Slides 
 
-- Slides: <Link>
-
-- Workshop Replay: <Link>
-
+- Workshop Replay: https://www.youtube.com/watch?v=3DElV51FqL8
 
 ## Reference Links
   
