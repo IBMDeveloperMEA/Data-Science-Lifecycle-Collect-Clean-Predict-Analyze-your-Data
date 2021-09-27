@@ -33,9 +33,6 @@ And if you are not, don't worry! We have got you covered! There are 3 steps to c
 
 ## Architecture 
   
-  Use the architecture on the IBM Developer - else edit it using the patterns 
-  Link for architecture: https://l2fprod.github.io/myarchitecture/ 
-
 ## Tutorial - Copied from IBM Developer
 
 ## Sample Outputs
