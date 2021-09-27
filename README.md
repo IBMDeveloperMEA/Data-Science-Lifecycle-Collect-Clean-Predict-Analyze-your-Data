@@ -1,4 +1,4 @@
-# Data Science Lifecycle: Collect, Clean, Predict & Analyze your Data
+# Data Science Lifecycle: Collect, Clean, Predict &amp; Analyze your Data
 
 ## Workshop Resources
 
