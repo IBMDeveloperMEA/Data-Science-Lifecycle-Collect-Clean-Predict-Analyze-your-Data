@@ -46,7 +46,7 @@ And if you are not, don't worry! We have got you covered! There are 3 steps to c
 
 
 ## About the workshop 
-AutoAI is a capability that automates machine learning tasks to ease the tasks of data scientists. It automatically prepares your data for modeling, chooses the best algorithm for your problem, and creates pipelines for the trained models, and it can be run in public clouds and in private clouds, including IBM Cloud Pak for Data.
+AutoAI is a service that automates machine learning tasks to ease the tasks of data scientists. It automatically prepares your data for modeling, chooses the best algorithm for your problem, and creates pipelines for the trained models, and it can be run in public clouds and in private clouds, including IBM Cloud Pak for Data.
 
 This tutorial explains the benefits of the AutoAI service on a use case. This will give you a better understanding of how regression and classification problems can be handled without any code — and how the tasks (feature engineering, model selection, hyperparameter tuning, etc.) are done with this service. This tutorial also includes details for choosing the best model among the pipelines and how to deploy and use these models via IBM Cloud Pak for Data platform.
 
@@ -60,24 +60,20 @@ Customer churn is an important aspect for any business, it gives them insights a
 
 ### Step 1. Create Cloud Pak for Data as a Service (Watson Studio)
  On top of the page, you will see a search bar. Search for "Watson Studio". Watson Studio service will show up. Click on it, if you already have an instance of Watson Studio, it should be visible. If so, click it. If not, click Watson Studio under Catalog Results to create a new service instance.
-
 ![WS](https://github.com/IBMDeveloperMEA/Recurrent-Neural-Networks-using-TensorFlow-Keras/raw/main/images/select-watson-studio-service.png)
 
 Select the type of plan to create if you are creating a new service instance. A Lite (free) plan should suffice for this tutorial). Click Create.
-
 ![WS2](https://github.com/IBMDeveloperMEA/Recurrent-Neural-Networks-using-TensorFlow-Keras/raw/main/images/watson-studio-lite-plan.png)
 
 ### Step 2. Create Object Storage
 
 Search for "Object Storage". Object Storage service will show up. Click on it. If you already have an instance of Object Storage, it should be visible. If so, click it. If not, click Object Storage under Catalog Results to create a new service instance.
-
 ![ObS](https://github.com/fawazsiddiqi/WatsonSPSS/raw/main/images/ob1.png?raw=true)
 ![ObS2](https://github.com/fawazsiddiqi/WatsonSPSS/raw/main/images/ob2.png?raw=true)
 
 ### Step 3. Create a Watson Machine Learning Service instance
 
 To create a Watson Machine Learning instance, search for Machine Learning and create a lite instance. If you already have an instance of Machine Learning, it should be visible. If so, click it. If not, click Machine Learning under Catalog Results to create a new service instance.
-
 ![ML1](https://github.com/fawazsiddiqi/WatsonSPSS/raw/main/images/wml1.png?raw=true)
 ![ML2](https://github.com/fawazsiddiqi/WatsonSPSS/raw/main/images/wml2.png?raw=true)
 
@@ -88,7 +84,6 @@ git clone https://github.com/IBMDeveloperMEA/Data-Science-Lifecycle-Collect-Clea
 ```
 
 To download this repository, click [here](https://github.com/IBMDeveloperMEA/Data-Science-Lifecycle-Collect-Clean-Predict-Analyze-your-Data/archive/refs/heads/main.zip) Or click on the green code icon, and download the ZIP file. You will need the repository for the data that is required for this tutorial.
-
 ![Download](/images/download_repo.png)
 
 ### Step 5. Create a new project
@@ -99,23 +94,19 @@ In Watson Studio, we use the concept of a project to collect and organize the re
 
 To create a new project, you can either:
 
- - Click Create a project from the Watson Studio home page
-
+1. Click Create a project from the Watson Studio home page
 ![project-home-page](https://github.com/Anam-Mahmood/Gain-hidden-insights-from-your-data-using-IBM-Watson-Studio/blob/main/images/github-image-WS.png?raw=true)
 
- - Or, click on Projects -> View all projects in the left-side navigation menu (☰), then click New project +
-
+2. Or, click on Projects -> View all projects in the left-side navigation menu (☰), then click New project +
 ![menu-projects-list](https://github.com/Anam-Mahmood/Gain-hidden-insights-from-your-data-using-IBM-Watson-Studio/blob/main/images/github-image-ws-2.png?raw=true)
 
-2. On the create project panel, you can either create an empty project, or import a file that contains project assets.
-
+3. On the create project panel, you can either create an empty project, or import a file that contains project assets.
 ![create-empty-project](https://github.com/Anam-Mahmood/Gain-hidden-insights-from-your-data-using-IBM-Watson-Studio/blob/main/images/project-create-options.png?raw=true)
 
-3. When creating a new project, you will need to provide a unique project name, and an object storage instance. For Storage, you should select the IBM Cloud Object Storage service you created in the previous step. If it is the only storage service that you have provisioned, it is assigned automatically.
-
+4. When creating a new project, you will need to provide a unique project name, and an object storage instance. For Storage, you should select the IBM Cloud Object Storage service you created in the previous step. If it is the only storage service that you have provisioned, it is assigned automatically.
 ![create-empty-project](https://github.com/Anam-Mahmood/Gain-hidden-insights-from-your-data-using-IBM-Watson-Studio/blob/main/images/project-create-2.png?raw=true)
 
-4. Click Create to finish creating the project.
+5. Click Create to finish creating the project.
 
 ### Step 6. Upload the data
 
@@ -124,7 +115,6 @@ As you have downloaded this repository, you will find the data in the `data` fol
 1. From your Watson Studio project panael, select Assets.
 
 2. If not already open, click the 1000 data icon at the upper right of the panel to open the Files sub-panel. Then, click Load.
-
 ![assets-load-data](https://github.com/Anam-Mahmood/Gain-hidden-insights-from-your-data-using-IBM-Watson-Studio/blob/main/images/assets-load-data.png?raw=true)
 
 3. Drag the file to the drop area to upload the data into Watson Studio.
@@ -136,19 +126,15 @@ As you have downloaded this repository, you will find the data in the `data` fol
 In this step we will use data refinery to manipulate the data. We will be using the data from the previous step that you have uploaded and going to change the chrun column to a binary column.
 
  1. In your project panel, you should see your data set, click on it
-
 ![data-set](/images/dataset.png)
 
  2. Once open, click on the refine icon at the upper right of the panel to open the Data Refinery sub-panel.
-
 ![refine](/images/refine.png)
 
  3. Select the ```CHRUN``` column and select ```convert column``` and select ```String``` as the new column type.
-
 ![refine](/images/select_churn.png)
 
  4. Once converted, select the ```CHRUN``` column again, and click on ```Operation``` to open the Operation sub-panel.
-
  ![refine](/images/operation.png)
 
  5. Select the ```Conditional Replace``` operation and add the following conditions:
@@ -161,15 +147,12 @@ In this step we will use data refinery to manipulate the data. We will be using 
   6. Click on ```Apply``` to apply the changes.
 
   7. Once again, select the ```CHRUN``` column and click on the three dots on the top right of the column, and select the ```Convert Column``` option, and proceed with integer.
-
   ![convert-to-int](/images/col_int.png)
 
   8. Finally on the top right of the panel, you should see a ```save and create a job``` option, click on it and follow the steps.
-
   ![save_job](/images/save_job.png) 
 
   9. Once completed, go back to your project and you should see your cleaned data in the ```Assets``` section. 
-
   ![back-proj](/images/back_proj.png)
   ![cleaned-data](/images/cleaned_data.png)
 
