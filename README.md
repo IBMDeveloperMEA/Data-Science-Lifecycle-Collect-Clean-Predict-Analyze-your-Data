@@ -313,10 +313,18 @@ json
 - Workshop Replay: https://www.youtube.com/watch?v=3DElV51FqL8
 
 ## Reference Links
+
+- [Data Science for Developers](https://www.ibm.com/developerworks/community/blogs/data-science-for-developers/)
+- [IBM Cloud Pak for Data as a Service](https://www.ibm.com/cloudpakfordata/)
+- [Cognitive Class](https://www.cognitiveclass.ai/)
   
 ## Done with the workshop? Here are some things you can try further
 
+- [Get started with machine learning](https://developer.ibm.com/learningpaths/learning-path-machine-learning-for-developers/)
+- [Get started with deep learning](https://developer.ibm.com/learningpaths/learning-path-deep-learning-for-developers/)
+- [Supervised deep learning](https://developer.ibm.com/learningpaths/supervised-deep-learning/)
+
 ## Workshop Speakers
 
-- Fawaz Siddiqi
-- Qamar un Nisa
+- [Fawaz Siddiqi](https://linktr.ee/thefaz)
+- [Qamar un Nisa](https://www.linkedin.com/in/qamarnisa/)
