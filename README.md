@@ -14,7 +14,22 @@
 1. [Prerequisites](#Prerequisites)
 1. [About the Workshop](#About-the-Workshop)
 1. [Tutorial](#Tutorial)
-  
+1. [Step 1. Create Cloud Pak for Data as a Service (Watson Studio)](#step-1-create-cloud-pak-for-data-as-a-service--watson-studio-)
+1. [Step 2. Create Object Storage](#step-2-create-object-storage)
+1. [Step 3. Create a Watson Machine Learning Service instance](#step-3-create-a-watson-machine-learning-service-instance)
+1. [Step 4. Download/Clone the repository](#step-4-download-clone-the-repository)
+1. [Step 5. Create a new project](#step-5-create-a-new-project)
+1. [Step 6. Upload the data](#step-6-upload-the-data)
+1. [Step 7. Clean your data](#step-7-clean-your-data)
+1. [Step 8. Create an AutoAI Experiment](#step-8-create-an-autoai-experiment)
+1. [Step 9. Save the AutoAI Model](#step-9-save-the-autoai-model)
+1. [Step 10. Deploy the model](#step-10-deploy-the-model)
+1. [Step 11. Test the model](#step-11-test-the-model)
+1. [Workshop Resources](#workshop-resources-1)
+1. [Reference Links](#reference-links)
+1. [Done with the workshop? Here are some things you can try further](#done-with-the-workshop--here-are-some-things-you-can-try-further)
+1. [Workshop Speakers](#workshop-speakers)
+
 ## Prerequisites
   
 ### **Sign-up/Login to IBM Cloud**
