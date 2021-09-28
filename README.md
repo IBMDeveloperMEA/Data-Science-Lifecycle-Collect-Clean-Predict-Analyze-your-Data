@@ -46,9 +46,9 @@ And if you are not, don't worry! We have got you covered! There are 3 steps to c
 
 
 ## About the workshop 
-AutoAI is a service that automates machine learning tasks to ease the tasks of data scientists. It automatically prepares your data for modeling, chooses the best algorithm for your problem, and creates pipelines for the trained models, and it can be run in public clouds and in private clouds, including IBM Cloud Pak for Data.
+AutoAI is a tool that automates machine learning tasks to ease the tasks of data scientists. It automatically prepares your data for modeling, chooses the best algorithm for your problem, and creates pipelines for the trained models, and it can be run in public clouds and in private clouds, including IBM Cloud Pak for Data.
 
-This tutorial explains the benefits of the AutoAI service on a use case. This will give you a better understanding of how regression and classification problems can be handled without any code — and how the tasks (feature engineering, model selection, hyperparameter tuning, etc.) are done with this service. This tutorial also includes details for choosing the best model among the pipelines and how to deploy and use these models via IBM Cloud Pak for Data platform.
+This tutorial explains the benefits of the AutoAI tool on a use case. This will give you a better understanding of how regression and classification problems can be handled without any code — and how the tasks (feature engineering, model selection, hyperparameter tuning, etc.) are done with this service. This tutorial also includes details for choosing the best model among the pipelines and how to deploy and use these models via IBM Cloud Pak for Data platform.
 
 Customer churn is an important aspect for any business, it gives them insights about their prospective customers. In this tutorial we will be predicting customer churn of car owners. We will be utilizing Watson data refinery to alter our data, and then use AutoAI to rapdliy develop a classfication machine learning model in a matter of minutes and predict our customer chrun.
 
