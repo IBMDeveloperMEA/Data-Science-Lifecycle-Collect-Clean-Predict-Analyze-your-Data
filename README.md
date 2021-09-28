@@ -68,13 +68,122 @@ To create a Watson Machine Learning instance, search for Machine Learning and cr
 
 ### Step 4. Download/Clone the repository
 
-``` git clone https://github.com/IBMDeveloperMEA/Data-Science-Lifecycle-Collect-Clean-Predict-Analyze-your-Data```
+``` 
+git clone https://github.com/IBMDeveloperMEA/Data-Science-Lifecycle-Collect-Clean-Predict-Analyze-your-Data
+```
 
 To download this repository, click [here](https://github.com/IBMDeveloperMEA/Data-Science-Lifecycle-Collect-Clean-Predict-Analyze-your-Data/archive/refs/heads/main.zip) Or click on the green code icon, and download the ZIP file. You will need the repository for the data that is required for this tutorial.
 
 ![Download](/images/download_repo.png)
 
 ### Step 5. Create a new project
+
+Search for your Watson Studio instance, and click on the ```Get Started``` button.
+
+In Watson Studio, we use the concept of a project to collect and organize the resources used to achieve a particular goal (resources to build a solution to a problem). Your project resources can include data, collaborators, and analytic assets like notebooks and models, etc.
+
+To create a new project, you can either:
+
+ - Click Create a project from the Watson Studio home page
+
+![project-home-page](https://github.com/Anam-Mahmood/Gain-hidden-insights-from-your-data-using-IBM-Watson-Studio/blob/main/images/github-image-WS.png?raw=true)
+
+ - Or, click on Projects -> View all projects in the left-side navigation menu (☰), then click New project +
+
+![menu-projects-list](https://github.com/Anam-Mahmood/Gain-hidden-insights-from-your-data-using-IBM-Watson-Studio/blob/main/images/github-image-ws-2.png?raw=true)
+
+2. On the create project panel, you can either create an empty project, or import a file that contains project assets.
+
+![create-empty-project](https://github.com/Anam-Mahmood/Gain-hidden-insights-from-your-data-using-IBM-Watson-Studio/blob/main/images/project-create-options.png?raw=true)
+
+3. When creating a new project, you will need to provide a unique project name, and an object storage instance. For Storage, you should select the IBM Cloud Object Storage service you created in the previous step. If it is the only storage service that you have provisioned, it is assigned automatically.
+
+![create-empty-project](https://github.com/Anam-Mahmood/Gain-hidden-insights-from-your-data-using-IBM-Watson-Studio/blob/main/images/project-create-2.png?raw=true)
+
+4. Click Create to finish creating the project.
+
+### Step 6. Upload the data
+
+As you have downloaded this repository, you will find the data in the `data` folder called ```customer_churn.csv```.
+
+1. From your Watson Studio project panael, select Assets.
+
+2. If not already open, click the 1000 data icon at the upper right of the panel to open the Files sub-panel. Then, click Load.
+
+![assets-load-data](https://github.com/Anam-Mahmood/Gain-hidden-insights-from-your-data-using-IBM-Watson-Studio/blob/main/images/assets-load-data.png?raw=true)
+
+3. Drag the file to the drop area to upload the data into Watson Studio.
+
+4. Wait until the file has been uploaded.
+
+### Step 7. Clean your data
+
+In this step we will use data refinery to manipulate the data. We will be using the data from the previous step that you have uploaded and going to change the chrun column to a binary column.
+
+ 1. In your project panel, you should see your data set, click on it
+
+![data-set](/images/dataset.png)
+
+ 2. Once open, click on the refine icon at the upper right of the panel to open the Data Refinery sub-panel.
+
+![refine](/images/refine.png)
+
+ 3. Select the ```CHRUN``` column and select ```convert column``` and select ```String``` as the new column type.
+
+![refine](/images/select_churn.png)
+
+ 4. Once converted, select the ```CHRUN``` column again, and click on ```Operation``` to open the Operation sub-panel.
+
+ ![refine](/images/operation.png)
+
+ 5. Select the ```Conditional Replace``` operation and add the following conditions:
+  - If the value is ```TRUE```, replace it with ```1```
+  - If the value is ```FALSE```, replace it with ```0```
+
+  It should look like this in the GUI
+  ![conditional-replace](/images/cond_rep.png)
+
+  6. Click on ```Apply``` to apply the changes.
+
+  7. Once again, select the ```CHRUN``` column and click on the three dots on the top right of the column, and select the ```Convert Column``` option, and proceed with integer.
+
+  ![convert-to-int](/images/col_int.png)
+
+  8. Finally on the top right of the panel, you should see a ```save and create a job``` option, click on it and follow the steps.
+
+  ![save_job](/images/save_job.png) 
+
+  9. Once completed, go back to your project and you should see your cleaned data in the ```Assets``` section. 
+
+  ![back-proj](/images/back_proj.png)
+  ![cleaned-data](/images/cleaned_data.png)
+
+You have now cleaned and modified your data, let's move on to the next step!
+
+### Step 8. Create an AutoAI Experiment
+
+  1. To start the AutoAI experience, click **Add to Project +** from the top and select **AutoAI experiment**.
+![Add a project](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-add-project.png)
+
+  1. Name your AutoAI experiment asset and leave the default compute configuration option listed in the drop-down menu, then click **Create**.
+![autoai_conf](/images/autoai_conf.png)
+
+  1. To configure the experiment, we must give it the dataset to use. Click on the **Select from project** option.
+![Add dataset to AutoAI](/images/data_source.png)
+
+  1. In the dialog, select the original dataset that is included in the repository, then click **Select asset**. We are using the original dataset as it has already been cleaned.
+![Add dataset to AutoAI](images/select_source.png)
+
+1. Once the dataset is read in, we need to indicate what we want the model to predict. Under the Select prediction column, find and click on the **Churn** row. And click on ```run experiment``` to start the experiment.
+![exp_config](/images/exp_config.png)
+
+1. The AutoAI experiment will run and the UI will show progress as it happens.
+![AutoAI progress](/images/progress.png)
+
+1. The UI will show progress as different algorithms/evaluators are selected and as different pipelines are created and evaluated. You can view the performance of the pipelines that have completed by expanding each pipeline section.
+
+1. The experiment can take several minutes to run. Upon completion, you will see a message that the pipelines have been created.
+![AutoAI pipelines created](/images/pipeline.png)
 
 ## Workshop Resources
 
