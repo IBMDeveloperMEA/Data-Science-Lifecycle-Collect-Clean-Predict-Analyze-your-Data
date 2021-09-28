@@ -185,6 +185,123 @@ You have now cleaned and modified your data, let's move on to the next step!
 1. The experiment can take several minutes to run. Upon completion, you will see a message that the pipelines have been created.
 ![AutoAI pipelines created](/images/pipeline.png)
 
+### Step 9. Save the AutoAI Model
+
+The AutoAI process by default selects top-two performing algorithms for a given dataset. After executing the appropriate data pre-processing steps, it follows this sequence for each of the algorithms to build candidate pipelines:
+
+* Automated model selection
+* Hyperparameter optimization
+* Automated feature engineering
+* Hyperparameter optimization
+
+You can review each pipeline and select to deploy the top performing pipeline from this experiment.
+
+1. Scroll down to see the Pipeline leaderboard. The top-performing pipeline is in the first rank.
+
+1. The next step is to select the model that gives the best result by looking at the metrics. In this case, Pipeline 4 gave the best result with the metric "Accuracy (optimized)". You can view the detailed results by clicking the corresponding pipeline from the leaderboard.
+![Pipeline leaderboard](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-pipeline-leaderboard.png)
+
+1. The model evaluation page will show metrics for the experiment, feature transformations performed (if any), which features contribute to the model, and more details of the pipeline.
+![Model evaluation](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-model-evaluation.png)
+
+1. To deploy this model, click on **Save as**, then **Model** to save it.
+
+1. A window opens that asks for the model name, description (optional), etc. You can accept the defaults or give your model a meaningful name/description and then click **Save**.
+![Save model name](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-save-model-name.png)
+
+1. You receive a notification to indicate that your model is saved to your project. Go back to your project main page by clicking on the project name on the navigator on the top left.
+![Model notification](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-model-notification.png)
+
+You will see the new model under the Models section of the Assets page.
+![Choose AI model](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-choose-asset-ai-model.png)
+
+## Step 10. Deploy the model
+
+1. Under the Models section of the Assets page, click the name of your saved model.
+
+1. To make the model available to be deployed, we need to make it available in the deployment space. Click on **Promote to deployment space**.
+![Deploy the model](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-deploy-model.png)
+
+1. To promote an asset, the project must first be associated with a deployment space. Click **Associate Deployment Space**.
+![Associate deployment space](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-associate-deployment-space.png)
+
+1. You may have already created a deployment space. In that case, click on the **Existing** tab and choose that deployment, then click **Associate**.
+![Associate existing deployment space](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-associate-existing-deployment-space.png)
+
+1. If you do not have an existing deployment, go to the New tab, give a name for your deployment space, then click **Associate**.
+![Create deployment space](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-create-deployment-space.png)
+
+1. From the model page, once again click on **Promote to deployment space**, then click **Promote to space** in the dialog box that pops up to confirm.
+![Promote to deployment space](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-view-deployment.png)
+
+1. This time you will see a notification that the model was promoted to the deployment space succesfully. Click **Deployment space** from this notification. You can also reach this page by using the hamburger (☰) menu and clicking **Deployments > View All Spaces** and click on your deployment space.
+![Deployment space](/images/view_space.png)
+
+1. Under the Assets tab, click on the AutoAI model you just promoted.
+![Click model in deployment space](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-deployment-space-choose-model.png)
+
+1. Click **Create deployment** in the top-right corner.
+![Click deploy button](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-click-deploy.png)
+
+1. On the Create a deployment screen, choose **Online** for the deployment type, give the deployment a name and an optional description, then click **Create**.
+![Create deployment](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-name-and-create-deployment.png)
+
+1. The deployment will show as "In progress" and switch to "Deployed" when done.
+![Click final deployment](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-deployed.png)
+
+Once the model is deployed we will go ahead with testing the model. 
+
+### Step 11. Test the model
+
+IBM Cloud Pak for Data as a Service offers tools to quickly test out Watson machine learning models. We begin with the built-in tooling.
+
+1. Click on the deployment. The deployment API reference tab shows how to use the model using Curl, Java, JavaScript, Python, and Scala. Click on the corresponding tabs to get the code snippet in the language you want to use.
+![Deployment API reference](/images/api_ml.png)
+
+1. To get to the built-in test tool, click the **Test** tab, then click on the **Provide input data as JSON** icon and paste the following data under Body:
+
+```
+json
+   {
+   	"input_data": [
+		{
+			"fields": [
+				"Gender",
+				"Status",
+				"Children",
+				"Est Income",
+				"Car Owner",
+				"Age",
+				"AvgMonthlySpend",
+				"CustomerSupportCalls",
+				"Paymethod",
+				"MembershipPlan"
+			],
+			"values": [
+				[
+					"M",
+					"S",
+					1,
+					57626.9,
+					"Y	",
+					43,
+					38.96,
+					null,
+					"CC",
+					2
+				]
+			]
+		}
+	]
+}
+```
+
+1. Click the **Predict** button and the model will be called with the input data. The results will display in the Result window. Scroll down to the bottom of the result to see the prediction ("Yes" or a "No" for Churn).
+![Test deployment with JSON](/images/test_model.png)
+
+1. Alternatively, you can click the **Provide input using form** icon and input the various fields, then click **Predict**.
+![Input to the fields](/images/model_form.png)
+
 ## Workshop Resources
 
 - Login/Sign Up for IBM Cloud: https://ibm.biz/CleanAndPredict 
@@ -199,4 +316,7 @@ You have now cleaned and modified your data, let's move on to the next step!
   
 ## Done with the workshop? Here are some things you can try further
 
-## Authors
+## Workshop Speakers
+
+- Fawaz Siddiqi
+- Qamar un Nisa
