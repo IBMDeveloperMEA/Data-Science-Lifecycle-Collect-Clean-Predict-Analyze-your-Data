@@ -144,15 +144,15 @@ In this step we will use data refinery to manipulate the data. We will be using 
   It should look like this in the GUI
   ![conditional-replace](/images/cond_rep.png)
 
-  6. Click on ```Apply``` to apply the changes.
+ 6. Click on ```Apply``` to apply the changes.
 
-  7. Once again, select the ```CHRUN``` column and click on the three dots on the top right of the column, and select the ```Convert Column``` option, and proceed with integer.
+ 7. Once again, select the ```CHRUN``` column and click on the three dots on the top right of the column, and select the ```Convert Column``` option, and proceed with integer.
   ![convert-to-int](/images/col_int.png)
 
-  8. Finally on the top right of the panel, you should see a ```save and create a job``` option, click on it and follow the steps.
+ 8. Finally on the top right of the panel, you should see a ```save and create a job``` option, click on it and follow the steps.
   ![save_job](/images/save_job.png) 
 
-  9. Once completed, go back to your project and you should see your cleaned data in the ```Assets``` section. 
+ 9. Once completed, go back to your project and you should see your cleaned data in the ```Assets``` section. 
   ![back-proj](/images/back_proj.png)
   ![cleaned-data](/images/cleaned_data.png)
 
@@ -160,16 +160,16 @@ You have now cleaned and modified your data, let's move on to the next step!
 
 ### Step 8. Create an AutoAI Experiment
 
-  1. To start the AutoAI experience, click **Add to Project +** from the top and select **AutoAI experiment**.
+ 1. To start the AutoAI experience, click **Add to Project +** from the top and select **AutoAI experiment**.
 ![Add a project](https://github.com/IBMDeveloperMEA/automate-model-building-with-autoai/raw/main/images/autoai-add-project.png)
 
-  1. Name your AutoAI experiment asset and leave the default compute configuration option listed in the drop-down menu, then click **Create**.
+ 1. Name your AutoAI experiment asset and leave the default compute configuration option listed in the drop-down menu, then click **Create**.
 ![autoai_conf](/images/autoai_conf.png)
 
-  1. To configure the experiment, we must give it the dataset to use. Click on the **Select from project** option.
+ 1. To configure the experiment, we must give it the dataset to use. Click on the **Select from project** option.
 ![Add dataset to AutoAI](/images/data_source.png)
 
-  1. In the dialog, select the original dataset that is included in the repository, then click **Select asset**. We are using the original dataset as it has already been cleaned.
+ 1. In the dialog, select the original dataset that is included in the repository, then click **Select asset**. We are using the original dataset as it has already been cleaned.
 ![Add dataset to AutoAI](images/select_source.png)
 
 1. Once the dataset is read in, we need to indicate what we want the model to predict. Under the Select prediction column, find and click on the **Churn** row. And click on ```run experiment``` to start the experiment.
