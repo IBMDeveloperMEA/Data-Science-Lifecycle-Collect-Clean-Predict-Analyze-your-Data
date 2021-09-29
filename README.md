@@ -299,8 +299,8 @@ IBM Cloud Pak for Data as a Service offers tools to quickly test out Watson mach
 
 2. To get to the built-in test tool, click the **Test** tab, then click on the **Provide input data as JSON** icon and paste the following data under Body:
 ``` json
-   {
-   	"input_data": [
+{
+	"input_data": [
 		{
 			"fields": [
 				"Gender",
@@ -319,8 +319,8 @@ IBM Cloud Pak for Data as a Service offers tools to quickly test out Watson mach
 					"M",
 					"S",
 					1,
-					57626.9,
-					"Y	",
+					5762.9,
+					"Y",
 					43,
 					38.96,
 					null,
